@@ -1,4 +1,4 @@
-from pattern import find_pattern_twice, find_pattern_multiple
+from pattern import find_pattern_multiple, find_pattern_twice
 
 
 def test_pattern_twice() -> None:
@@ -16,7 +16,7 @@ def test_pattern_twice() -> None:
 
 
 def test_pattern_multiple() -> None:
-    # assert find_pattern_multiple("11-22") == {11, 22}
+    assert find_pattern_multiple("11-22") == {11, 22}
     assert find_pattern_multiple("95-115") == {99, 111}
     assert find_pattern_multiple("998-1012") == {999, 1010}
     assert find_pattern_multiple("1188511880-1188511890") == {1188511885}

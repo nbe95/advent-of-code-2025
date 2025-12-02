@@ -1,6 +1,7 @@
 import pytest
 from dial import Dial
 
+
 def test_overflow() -> None:
     d = Dial(0)
     assert d.get_pos() == 0

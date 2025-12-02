@@ -1,6 +1,5 @@
 """Advent of Code - 2025-12-02"""
 
-
 from pattern import find_pattern_multiple, find_pattern_twice
 
 
@@ -14,8 +13,12 @@ def main() -> int:
             found_multiple = find_pattern_multiple(id_range)
             sum_twice += sum(found_twice)
             sum_multiple += sum(found_multiple)
-            print(f"Found {len(found_twice)} IDs with pattern occurring twice in range {id_range}: {found_twice}")
-            print(f"Found {len(found_multiple)} IDs with pattern occurring multiple times in range {id_range}: {found_multiple}")
+            print(
+                f"Found {len(found_twice)} IDs with pattern occurring twice in range {id_range}: {found_twice}"
+            )
+            print(
+                f"Found {len(found_multiple)} IDs with pattern occurring multiple times in range {id_range}: {found_multiple}"
+            )
 
         print()
         print(f"Total sum (twice): {sum_twice}")
