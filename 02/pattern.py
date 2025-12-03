@@ -1,3 +1,6 @@
+import re
+
+
 def find_pattern_twice(id_range: str) -> set[int]:
     start, end = map(int, id_range.split("-"))
 
@@ -25,3 +28,9 @@ def find_pattern_multiple(id_range: str) -> set[int]:
             {value for value in range(start, end + 1) if is_repetitive(str(value), length)}
         )
     return result
+
+
+def find_pattern_multiple_regex(id_range: str) -> set[int]:
+    # A lightweight alternative solution using regex
+    start, end = map(int, id_range.split("-"))
+    return {value for value in range(start, end + 1) if re.fullmatch(r"(\d+)\1+", str(value))}

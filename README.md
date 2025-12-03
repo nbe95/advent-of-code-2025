@@ -6,4 +6,4 @@ Daily tasks are organized in respective subdirectories with `main.py` script as 
 ## pdm scripts
 
 - `pdm run format`: Format code
-- `pdm run format`: Run all unit tests
+- `pdm run test`: Run all unit tests
