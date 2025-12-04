@@ -7,3 +7,11 @@ Daily tasks are organized in respective subdirectories with `main.py` script as 
 
 - `pdm run format`: Format code
 - `pdm run test`: Run all unit tests
+
+## Evaluation and Findings
+
+- Day 02
+  - The first solution that comes to mind is presumably not the best/fastest/easiest one.
+  - Requirements changed? Starting anew can be better and faster than modifying the existing solution.
+- Day 03
+  - The best software design is only as good as it fits real-world input.
