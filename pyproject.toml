@@ -19,6 +19,7 @@ dev = [
 distribution = false
 
 [tool.pdm.scripts]
+day = "python {args}/main.py"
 format.composite = [
     "isort .",
     "black ."

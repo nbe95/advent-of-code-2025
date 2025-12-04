@@ -1,10 +1,12 @@
 """Advent of Code - 2025-12-01"""
 
+import sys
+
 from dial import Dial
 
 
 def main() -> int:
-    with open("input.txt", "r") as handle:
+    with open(sys.path[0] + "/input.txt", "r") as handle:
         lines = handle.readlines()
         dial = Dial()
         for command in lines:

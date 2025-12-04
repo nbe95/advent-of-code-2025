@@ -1,15 +1,16 @@
 """Advent of Code - 2025-12-03"""
 
+import sys
+
 from max_num import get_max_num
 
 
 def main() -> int:
-    with open("input.txt", "r") as handle:
+    with open(sys.path[0] + "/input.txt", "r") as handle:
         total_2: int = 0
         total_12: int = 0
         lines: list[str] = handle.readlines()
         for no, line in enumerate(lines):
-            print(f"Processing line {no + 1} of {len(lines)}...")
             battery_stack: str = line.strip()
             total_2 += get_max_num(battery_stack, 2)
             total_12 += get_max_num(battery_stack, 12)

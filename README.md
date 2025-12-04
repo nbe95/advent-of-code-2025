@@ -5,11 +5,14 @@ Daily tasks are organized in respective subdirectories with `main.py` script as 
 
 ## pdm scripts
 
-- `pdm run format`: Format code
-- `pdm run test`: Run all unit tests
+- `pdm day nn`: Run script for day _n_.
+- `pdm format`: Format entire code.
+- `pdm test`: Run all unit tests.
 
 ## Evaluation and Findings
 
+- Day 01
+  - Test first, code later.
 - Day 02
   - The first solution that comes to mind is presumably not the best/fastest/easiest one.
   - Requirements changed? Starting anew can be better and faster than modifying the existing solution.
