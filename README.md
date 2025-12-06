@@ -18,3 +18,5 @@ Daily tasks are organized in respective subdirectories with `main.py` script as 
   - Requirements changed? Starting anew can be better and faster than modifying the existing solution.
 - Day 03
   - The best software design is only as good as it fits real-world input.
+- Day 05
+  - Optimization _does_ matter.
