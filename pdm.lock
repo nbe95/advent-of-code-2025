@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:bdbdf1a26a93155fa765ff59766fb81bb7340ff5d55b9d623c48b2a398be9cf3"
+content_hash = "sha256:48c40466933c38bff334ff992a40a1e9c557186dc60369f7eb053755382dbd88"
 
 [[metadata.targets]]
 requires_python = "==3.11.*"
@@ -167,6 +167,19 @@ dependencies = [
 files = [
     {file = "pytest-9.0.1-py3-none-any.whl", hash = "sha256:67be0030d194df2dfa7b556f2e56fb3c3315bd5c8822c6951162b92b32ce7dad"},
     {file = "pytest-9.0.1.tar.gz", hash = "sha256:3e9c069ea73583e255c3b21cf46b8d3c56f6e3a1a8f6da94ccb0fcf57b9d73c8"},
+]
+
+[[package]]
+name = "pytest-unordered"
+version = "0.7.0"
+summary = "Test equality of unordered collections in pytest"
+groups = ["dev"]
+dependencies = [
+    "pytest>=7.0.0",
+]
+files = [
+    {file = "pytest_unordered-0.7.0-py3-none-any.whl", hash = "sha256:486b26d24a2d3b879a275c3d16d14eda1bd9c32aafddbb17b98ac755daba7584"},
+    {file = "pytest_unordered-0.7.0.tar.gz", hash = "sha256:0f953a438db00a9f6f99a0f4727f2d75e72dd93319b3d548a97ec9db4903a44f"},
 ]
 
 [[package]]
