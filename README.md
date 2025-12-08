@@ -2,6 +2,7 @@
 
 Python solutions for [Advent of Code 2025](https://adventofcode.com/2025/).
 Daily tasks are organized in respective subdirectories with `main.py` script as entry point.
+Each day's individual puzzle input needs to be placed as `ìnput.txt` file inside each subdirectory.
 
 ## pdm scripts
 
