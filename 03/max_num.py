@@ -2,7 +2,8 @@ def get_max_num(value: str, digits: int) -> int:
     result: int = 0
     offset: int = 0
     for index in range(digits):
-        # Look ahead `digits-index` positions (leaving enough digits to be taken by further iterations) and take biggest number occurring first
+        # Look ahead `digits-index` positions (leaving enough digits to be taken by further
+        # iterations) and take biggest number occurring first
         candidates: str = value[offset : len(value) - (digits - index - 1)]
         max_digit: int = max(map(int, candidates))
         offset += candidates.find(str(max_digit)) + 1

@@ -20,6 +20,8 @@ def main() -> int:
 
         print(f"Total removed paper rolls: {total_removed}")
 
+    return 0
+
 
 if __name__ == "__main__":
     main()

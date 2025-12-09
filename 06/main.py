@@ -15,6 +15,8 @@ def main() -> int:
         m = OpMatrixRtl(lines)
         print(f"Grand total of OpMatrix (right to left): {m.get_grand_total()}")
 
+    return 0
+
 
 if __name__ == "__main__":
     main()

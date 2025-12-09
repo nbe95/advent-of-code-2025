@@ -11,8 +11,11 @@ def main() -> int:
         floor = TileFloor(handle.readlines())
         print(f"Largest area between two red tiles: {floor.get_largest_area()}")
         print(
-            f"Largest area between two red tiles (with only red and green tiles): {floor.get_largest_area(True)}"
+            f"Largest area between two red tiles (with only red and green tiles): "
+            f"{floor.get_largest_area(True)}"
         )
+
+    return 0
 
 
 if __name__ == "__main__":

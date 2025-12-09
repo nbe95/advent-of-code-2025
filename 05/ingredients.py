@@ -1,16 +1,16 @@
 class IngredientDb:
 
-    def __init__(self, input: list[str]):
-        separator: int = input.index("")
+    def __init__(self, lines: list[str]):
+        separator: int = lines.index("")
         fresh_ranges: list[tuple[int, int]] = [
-            tuple(map(int, r.split("-"))) for r in input[:separator]
+            tuple(map(int, r.split("-"))) for r in lines[:separator]  # type: ignore
         ]
 
-        self._fresh_ranges: list[tuple[int, int]] = self._merge_ranges(fresh_ranges)
-        self._available: set[int] = set(map(int, input[separator + 1 :]))
+        self._fresh_ranges: list[tuple[int, int]] = self.merge_ranges(fresh_ranges)
+        self._available: set[int] = set(map(int, lines[separator + 1 :]))
 
     @staticmethod
-    def _merge_ranges(ranges: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    def merge_ranges(ranges: list[tuple[int, int]]) -> list[tuple[int, int]]:
         """Remove overlapping ranges, eliminating any duplicate entries"""
         if len(ranges) == 0:
             return []

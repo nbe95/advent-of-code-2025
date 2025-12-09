@@ -17,12 +17,15 @@ def main() -> int:
             sum_multiple += sum(found_multiple)
             print(f"Found {len(found_twice)} IDs with pattern occurring twice in range {id_range}.")
             print(
-                f"Found {len(found_multiple)} IDs with pattern occurring multiple times in range {id_range}."
+                f"Found {len(found_multiple)} IDs with pattern occurring multiple times in range "
+                f"{id_range}."
             )
 
         print()
         print(f"Total sum (twice): {sum_twice}")
         print(f"Total sum (multiple): {sum_multiple}")
+
+    return 0
 
 
 if __name__ == "__main__":

@@ -21,12 +21,13 @@ class Tile:
 
             return [Tile(self.x, y) for y in range(start, end + step, step)]
 
-        elif self.y == other.y:
+        if self.y == other.y:
             start = self.x + (1 if self.x < other.x else -1)
             end = other.x + (-1 if self.x < other.x else 1)
             step = 1 if self.x < other.x else -1
             return [Tile(x, self.y) for x in range(start, end + step, step)]
-        else:
-            raise ValueError(
-                f"Cannot find direct path between tiles not aligned on one common axis: {self}, {other}"
-            )
+
+        raise ValueError(
+            f"Cannot find direct path between tiles not aligned on one common axis: "
+            f"{self}, {other}"
+        )

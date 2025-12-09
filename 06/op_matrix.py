@@ -17,8 +17,8 @@ class OpMatrix:
     def calc_cols(self) -> list[int]:
         total: list[int] = []
         for col in self._cols:
-            values: list[int] = map(int, col[:-1])
-            operator: str = col[-1]
+            values: map = map(int, col[:-1])
+            operator: str = str(col[-1])
             if operator == "+":
                 total.append(sum(values))
             elif operator == "*":
@@ -33,6 +33,7 @@ class OpMatrix:
 
 class OpMatrixRtl(OpMatrix):
 
+    # pylint: disable=super-init-not-called
     def __init__(self, lines: list[str]):
         # Goal: Transform input data at initial parsing to match structure of OpMatrix
         self._cols: list[list[int | str]] = []
@@ -45,12 +46,12 @@ class OpMatrixRtl(OpMatrix):
 
             next_op = re.search(r"[+*]", lines[-1][col_offset + 1 :])
             if next_op:
-                col_width: int = next_op.start()
+                col_width = next_op.start()
             else:
-                col_width: int = max(len(l) - col_offset for l in lines)
+                col_width = max(len(line) - col_offset for line in lines)
 
             # Parse individual digits of numbers (x/y represent relative character positions)
-            values: list[str] = []
+            values: list[int] = []
             for x in range(col_offset + col_width - 1, col_offset - 1, -1):
                 number: int = 0
                 for y in range(0, len(lines) - 1):
@@ -62,7 +63,7 @@ class OpMatrixRtl(OpMatrix):
                     number = number * 10 + int(digit)
                 values.append(number)
 
-            self._cols.append([*map(int, values), operator])
+            self._cols.append([*values, operator])
 
             # Find beginning of next column or abort if no more columns left
             col_offset += col_width + 1

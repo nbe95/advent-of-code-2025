@@ -24,8 +24,11 @@ def main() -> int:
         last_boxes = make_one_circuit(boxes)
         product: int = reduce(mul, (box.x for box in last_boxes))
         print(
-            f"Product of x coordinates of the last 2 boxes needed to form one single circuit: {product}"
+            f"Product of x coordinates of the last 2 boxes needed to form one single circuit: "
+            f"{product}"
         )
+
+    return 0
 
 
 if __name__ == "__main__":

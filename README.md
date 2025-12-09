@@ -7,10 +7,11 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
 ## pdm scripts
 
 - `pdm day nn`: Run script for day _n_.
+- `pdm test`: Run all unit tests.
+- `pdm format`: Format entire code.
+- `pdm lint nn`: Run linter and code checkers for day _n_.
 - `pdm input nn`: Fetch and store puzzle input for day _n_.
   - _SESSION_ID_ must be specified in `.env` file.
-- `pdm format`: Format entire code.
-- `pdm test`: Run all unit tests.
 
 ## Evaluation and Findings
 

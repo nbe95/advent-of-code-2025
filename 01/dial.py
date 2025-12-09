@@ -14,7 +14,7 @@ class Dial:
             case _:
                 raise ValueError(f"Invalid command: {command}")
 
-        ticks_in_between: list[int] = range(self._pos + steps, self._pos, 1 if steps < 0 else -1)
+        ticks_in_between: range = range(self._pos + steps, self._pos, 1 if steps < 0 else -1)
         for tick in ticks_in_between:
             tick %= 100
             self._count_with_ticks[tick] = self._count_with_ticks.get(tick, 0) + 1
