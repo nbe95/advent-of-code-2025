@@ -67,7 +67,7 @@ class TachyonManifold:
                 elif current == "^":
                     # add up possible paths to the left and right
                     paths_left: int = paths[y + 1][x - 1] if x > 0 else 0
-                    paths_right: int = paths[y + 1][x + 1] if x + 1 < width else 0
+                    paths_right: int = paths[y + 1][x + 1] if x < width - 1 else 0
                     paths[y][x] = paths_left + paths_right
 
         # Find resulting number of paths at root node

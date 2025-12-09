@@ -46,9 +46,9 @@ def test_n_circuits() -> None:
 
 
 def test_one_circuit() -> None:
-    # Connect all except the last circuit
+    exp1 = Box(216, 146, 977)
+    exp2 = Box(117, 168, 530)
     box1, box2 = make_one_circuit(boxes)
 
-    last1, last2 = Box(216, 146, 977), Box(117, 168, 530)
-    assert (box1, box2) == unordered(last1, last2)
+    assert (box1, box2) == unordered(exp1, exp2)
     assert box1.x * box2.x == 25272
