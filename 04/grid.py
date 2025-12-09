@@ -20,17 +20,17 @@ class PaperGrid:
     def remove_accessible_rolls(self) -> int:
         new_grid: list[str] = []
         count: int = 0
-        for row in range(len(self._grid)):
+        for row_index, row in enumerate(self._grid):
             new_grid_row = ""
-            for col in range(len(self._grid[row])):
+            for col_index, _ in enumerate(row):
                 if (
-                    self.get_cell(row, col) == "@"
-                    and self.get_adjacent_cells(row, col).count("@") < 4
+                    self.get_cell(row_index, col_index) == "@"
+                    and self.get_adjacent_cells(row_index, col_index).count("@") < 4
                 ):
                     count += 1
                     new_grid_row += "x"
                 else:
-                    new_grid_row += self.get_cell(row, col)
+                    new_grid_row += self.get_cell(row_index, col_index)
             new_grid.append(new_grid_row)
         self._grid = new_grid
         return count

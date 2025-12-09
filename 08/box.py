@@ -50,7 +50,7 @@ def make_circuits(boxes: list[Box], num_to_connect: int) -> list[list[Box]]:
         box1, box2 = boxes_by_dist.pop(0)
         circuits = _merge_circuits(circuits, box1, box2)
 
-    return sorted(circuits, key=lambda c: len(c), reverse=True)
+    return sorted(circuits, key=len, reverse=True)
 
 
 def make_one_circuit(boxes: list[Box]) -> tuple[Box, Box]:
@@ -60,7 +60,6 @@ def make_one_circuit(boxes: list[Box]) -> tuple[Box, Box]:
     circuits: list[list[Box]] = [[box] for box in boxes]
     boxes_by_dist: list[tuple[Box, Box]] = sort_by_distance(boxes)
 
-    box1 = box2 = None
     while len(circuits) > 1:
         box1, box2 = boxes_by_dist.pop(0)
         circuits = _merge_circuits(circuits, box1, box2)

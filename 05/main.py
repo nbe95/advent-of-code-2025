@@ -15,6 +15,8 @@ def main() -> int:
         num_fresh: int = db.count_fresh()
         print(f"Total number of fresh ingredients: {num_fresh}")
 
+    return 0
+
 
 if __name__ == "__main__":
     main()

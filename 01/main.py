@@ -16,6 +16,8 @@ def main() -> int:
         print(f"Password: {dial.count(0)}.")
         print(f"Password with counting each tick: {dial.count(0, True)}.")
 
+    return 0
+
 
 if __name__ == "__main__":
     main()

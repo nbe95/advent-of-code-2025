@@ -6,10 +6,10 @@ class Tile:
     x: int
     y: int
 
-    @classmethod
     @staticmethod
     def from_string(line: str) -> "Tile":
-        return Tile(*map(int, line.split(",")))
+        start, end = map(int, line.split(","))
+        return Tile(start, end)
 
     def calc_area_to(self, other: "Tile") -> int:
         return (abs(self.x - other.x) + 1) * (abs(self.y - other.y) + 1)
@@ -22,12 +22,13 @@ class Tile:
 
             return [Tile(self.x, y) for y in range(start, end + step, step)]
 
-        elif self.y == other.y:
+        if self.y == other.y:
             start = self.x + (1 if self.x < other.x else -1)
             end = other.x + (-1 if self.x < other.x else 1)
             step = 1 if self.x < other.x else -1
             return [Tile(x, self.y) for x in range(start, end + step, step)]
-        else:
-            raise ValueError(
-                f"Cannot find direct path between tiles not aligned on one common axis: {self}, {other}"
-            )
+
+        raise ValueError(
+            f"Cannot find direct path between tiles not aligned on one common axis: "
+            f"{self}, {other}"
+        )

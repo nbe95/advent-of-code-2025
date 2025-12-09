@@ -13,6 +13,8 @@ def main() -> int:
         print(f"Total times the Tachyon Manifold beam was split: {m.count_splits()}")
         print(f"Possible number of distinct timelines: {m.count_paths()}")
 
+    return 0
+
 
 if __name__ == "__main__":
     main()

@@ -8,17 +8,17 @@ def test_ingredients() -> None:
 
 
 def test_range_merging() -> None:
-    assert IngredientDb._merge_ranges([]) == []
-    assert IngredientDb._merge_ranges([(1, 2)]) == [(1, 2)]
-    assert IngredientDb._merge_ranges([(1, 5), (1, 5)]) == [(1, 5)]
-    assert IngredientDb._merge_ranges([(1, 4), (4, 5)]) == [(1, 5)]
-    assert IngredientDb._merge_ranges([(1, 10), (2, 3), (4, 5)]) == [(1, 10)]
-    assert IngredientDb._merge_ranges([(1, 5), (3, 7), (10, 12), (6, 8), (1, 2), (15, 18)]) == [
+    assert not IngredientDb.merge_ranges([])
+    assert IngredientDb.merge_ranges([(1, 2)]) == [(1, 2)]
+    assert IngredientDb.merge_ranges([(1, 5), (1, 5)]) == [(1, 5)]
+    assert IngredientDb.merge_ranges([(1, 4), (4, 5)]) == [(1, 5)]
+    assert IngredientDb.merge_ranges([(1, 10), (2, 3), (4, 5)]) == [(1, 10)]
+    assert IngredientDb.merge_ranges([(1, 5), (3, 7), (10, 12), (6, 8), (1, 2), (15, 18)]) == [
         (1, 8),
         (10, 12),
         (15, 18),
     ]
-    assert IngredientDb._merge_ranges([(1, 3), (2, 6), (8, 10), (15, 18)]) == [
+    assert IngredientDb.merge_ranges([(1, 3), (2, 6), (8, 10), (15, 18)]) == [
         (1, 6),
         (8, 10),
         (15, 18),
