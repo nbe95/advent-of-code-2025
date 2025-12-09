@@ -23,3 +23,5 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
   - The best software design is only as good as it fits real-world input.
 - Day 05
   - Optimization _does_ matter.
+- Day 09
+  - A good drawing beats hours of thinking.
