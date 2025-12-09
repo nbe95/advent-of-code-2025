@@ -20,12 +20,13 @@ dev = [
 distribution = false
 
 [tool.pdm.scripts]
-day = "python {args}/main.py"
+day = "python ./{args}/main.py"
 format.composite = [
     "isort .",
     "black ."
 ]
 test = "pytest"
+input = "./fetch-input.sh {args}"
 
 [tool.black]
 line-length = 100
