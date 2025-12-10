@@ -26,3 +26,6 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
   - Optimization _does_ matter.
 - Day 09
   - A good drawing beats hours of thinking.
+- Day 10
+  - Not ignoring hints like _"-0.5 button presses"_ makes it way easier to rethink what the actual
+    (type of) problem is.
