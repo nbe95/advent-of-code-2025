@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:e5dbb1a5da522be936c546cab2eacae2c8f57417701deb687094bf0bafadbc4f"
+content_hash = "sha256:67613f3d21cf35faa92f5ecf301bf029061d73e078f7250bc9724c512d71d4cb"
 
 [[metadata.targets]]
 requires_python = "==3.11.*"
@@ -208,6 +208,79 @@ files = [
 ]
 
 [[package]]
+name = "numpy"
+version = "2.4.0rc1"
+requires_python = ">=3.11"
+summary = "Fundamental package for array computing in Python"
+groups = ["default", "dev"]
+files = [
+    {file = "numpy-2.4.0rc1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:99d926acbbfebde8e122cc35d34456907ada7d44031d9a6e2d8ea994124510ce"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:68161b6510e639023c60d45d2477d7d96c2bd2338b3076297b2509c2bb720f55"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:c9790472b6ac8661fddade32d9e5072a2860fe02013707b20f16a2f65bd58fa4"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-macosx_14_0_x86_64.whl", hash = "sha256:4630bd4195ccf394e098c78447435df077bf5124751de5e152fd866b3b7437b9"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:f0d2f2b7391931ecafa8c174ae855ddd63f36a21f43c2b4c9d18d8e198f4d1b8"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:62109d8bea56d4446661c918cc2f3a4a5eaf0eac007bdaec3625bd14d7b01d22"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:a2f364f198b9d77bd68ee931140561c29cfa54d5b58c9efa69e8301bbf8de7da"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:dd1fec71c1575ca2b6b1dc3506c954c2586f3ad03766640e313c321fc03c5c86"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-win32.whl", hash = "sha256:cc42cab98f60ccb9d28819f751eb3e1eaa02f7e895a9b4793d29a40164569a5c"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-win_amd64.whl", hash = "sha256:4dc039fc156bca9c93f17f0c5762ab75cb54f3c54c2acbf28e3aa6900d003ba6"},
+    {file = "numpy-2.4.0rc1-cp311-cp311-win_arm64.whl", hash = "sha256:9418a8d08bd7a7175e7eaa1f16683db8645950478e1a7a01ac19a86620904f3d"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-macosx_10_15_x86_64.whl", hash = "sha256:3397899274c7fd5febc99b03a73cd9ab55d6866d05b0a8f748b0711496d10314"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-macosx_11_0_arm64.whl", hash = "sha256:a885029df7aa51a63571ec58621f546e7b09449dfa9023c17c6215121ee18fed"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-macosx_14_0_arm64.whl", hash = "sha256:86bba6f973102d42eec006997f111e574822da8fc8117015a090e962e7c5e15f"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-macosx_14_0_x86_64.whl", hash = "sha256:4dcfc4f89505ddd3fb965f32365677b492482c211d3725276b5c4f0af60317a5"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:0eafd0d3a9009cfb314ed23481807f3a910b3b148e2a9d6069b836ae7c12bd7c"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:755363a293b16430c7a1d3c9d65b047ea65a8b55e33a403bf689005cb47489cd"},
+    {file = "numpy-2.4.0rc1-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:dbabb52390c9cd769112b703d1f27cc16758b684ab993242ede92e0d15419da0"},
+    {file = "numpy-2.4.0rc1.tar.gz", hash = "sha256:658096d9a274d5a44ed22f4ccf6ca1e59e098decc0f6040e9ae7d5a932ec3168"},
+]
+
+[[package]]
+name = "numpy-typing-compat"
+version = "20251206.2.4"
+requires_python = ">=3.11"
+summary = "Static typing compatibility layer for older versions of NumPy"
+groups = ["dev"]
+dependencies = [
+    "numpy<2.5,>=2.4rc1",
+]
+files = [
+    {file = "numpy_typing_compat-20251206.2.4-py3-none-any.whl", hash = "sha256:a82e723bd20efaa4cf2886709d4264c144f1f2b609bda83d1545113b7e47a5b5"},
+    {file = "numpy_typing_compat-20251206.2.4.tar.gz", hash = "sha256:59882d23aaff054a2536da80564012cdce33487657be4d79c5925bb8705fcabc"},
+]
+
+[[package]]
+name = "optype"
+version = "0.15.0"
+requires_python = ">=3.11"
+summary = "Building Blocks for Precise & Flexible Type Hints"
+groups = ["dev"]
+dependencies = [
+    "typing-extensions>=4.10; python_full_version < \"3.13\"",
+]
+files = [
+    {file = "optype-0.15.0-py3-none-any.whl", hash = "sha256:caba40ece9ea39b499fa76c036a82e0d452a432dd4dd3e8e0d30892be2e8c76c"},
+    {file = "optype-0.15.0.tar.gz", hash = "sha256:457d6ca9e7da19967ec16d42bdf94e240b33b5d70a56fbbf5b427e5ea39cf41e"},
+]
+
+[[package]]
+name = "optype"
+version = "0.15.0"
+extras = ["numpy"]
+requires_python = ">=3.11"
+summary = "Building Blocks for Precise & Flexible Type Hints"
+groups = ["dev"]
+dependencies = [
+    "numpy-typing-compat<20251207,>=20250818.1.25",
+    "numpy>=1.25",
+    "optype==0.15.0",
+]
+files = [
+    {file = "optype-0.15.0-py3-none-any.whl", hash = "sha256:caba40ece9ea39b499fa76c036a82e0d452a432dd4dd3e8e0d30892be2e8c76c"},
+    {file = "optype-0.15.0.tar.gz", hash = "sha256:457d6ca9e7da19967ec16d42bdf94e240b33b5d70a56fbbf5b427e5ea39cf41e"},
+]
+
+[[package]]
 name = "packaging"
 version = "25.0"
 requires_python = ">=3.8"
@@ -350,6 +423,43 @@ groups = ["dev"]
 files = [
     {file = "pytokens-0.3.0-py3-none-any.whl", hash = "sha256:95b2b5eaf832e469d141a378872480ede3f251a5a5041b8ec6e581d3ac71bbf3"},
     {file = "pytokens-0.3.0.tar.gz", hash = "sha256:2f932b14ed08de5fcf0b391ace2642f858f1394c0857202959000b68ed7a458a"},
+]
+
+[[package]]
+name = "scipy"
+version = "1.16.3"
+requires_python = ">=3.11"
+summary = "Fundamental algorithms for scientific computing in Python"
+groups = ["default"]
+dependencies = [
+    "numpy<2.6,>=1.25.2",
+]
+files = [
+    {file = "scipy-1.16.3-cp311-cp311-macosx_10_14_x86_64.whl", hash = "sha256:40be6cf99e68b6c4321e9f8782e7d5ff8265af28ef2cd56e9c9b2638fa08ad97"},
+    {file = "scipy-1.16.3-cp311-cp311-macosx_12_0_arm64.whl", hash = "sha256:8be1ca9170fcb6223cc7c27f4305d680ded114a1567c0bd2bfcbf947d1b17511"},
+    {file = "scipy-1.16.3-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:bea0a62734d20d67608660f69dcda23e7f90fb4ca20974ab80b6ed40df87a005"},
+    {file = "scipy-1.16.3-cp311-cp311-macosx_14_0_x86_64.whl", hash = "sha256:2a207a6ce9c24f1951241f4693ede2d393f59c07abc159b2cb2be980820e01fb"},
+    {file = "scipy-1.16.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:532fb5ad6a87e9e9cd9c959b106b73145a03f04c7d57ea3e6f6bb60b86ab0876"},
+    {file = "scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:0151a0749efeaaab78711c78422d413c583b8cdd2011a3c1d6c794938ee9fdb2"},
+    {file = "scipy-1.16.3-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:b7180967113560cca57418a7bc719e30366b47959dd845a93206fbed693c867e"},
+    {file = "scipy-1.16.3-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:deb3841c925eeddb6afc1e4e4a45e418d19ec7b87c5df177695224078e8ec733"},
+    {file = "scipy-1.16.3-cp311-cp311-win_amd64.whl", hash = "sha256:53c3844d527213631e886621df5695d35e4f6a75f620dca412bcd292f6b87d78"},
+    {file = "scipy-1.16.3-cp311-cp311-win_arm64.whl", hash = "sha256:9452781bd879b14b6f055b26643703551320aa8d79ae064a71df55c00286a184"},
+    {file = "scipy-1.16.3.tar.gz", hash = "sha256:01e87659402762f43bd2fee13370553a17ada367d42e7487800bf2916535aecb"},
+]
+
+[[package]]
+name = "scipy-stubs"
+version = "1.16.3.3"
+requires_python = ">=3.11"
+summary = "Type annotations for SciPy"
+groups = ["dev"]
+dependencies = [
+    "optype[numpy]<0.16,>=0.14.0",
+]
+files = [
+    {file = "scipy_stubs-1.16.3.3-py3-none-any.whl", hash = "sha256:f6316b36cd0fb272c994ae5b10c4a73c644a7e156ed8d32bcd9c35303d0e1b7e"},
+    {file = "scipy_stubs-1.16.3.3.tar.gz", hash = "sha256:af47578875d5557567225a16ec1b9b38a48c4c4377d92396413ebd65406c44ee"},
 ]
 
 [[package]]
