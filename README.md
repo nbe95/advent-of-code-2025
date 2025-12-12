@@ -29,3 +29,6 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
 - Day 10
   - Not ignoring hints like _"-0.5 button presses"_ makes it way easier to rethink what the actual
     (type of) problem is.
+- Day 11
+  - Think ahead, but focus on what _really_ needs to be done. For everything else,
+    [YAGNI](https://en.wikipedia.org/wiki/YAGNI).
