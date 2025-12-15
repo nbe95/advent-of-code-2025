@@ -13,13 +13,14 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
 - `pdm input nn`: Fetch and store puzzle input for day _n_.
   - _SESSION_ID_ must be specified in `.env` file.
 
-## Evaluation and Findings
+## Personal Findings
 
 - Day 01
   - Test first, code later.
 - Day 02
   - The first solution that comes to mind is presumably not the best/fastest/easiest one.
-  - Requirements changed? Starting anew can be better and faster than modifying the existing solution.
+  - Requirements changed? Starting anew can be better and faster than modifying the existing
+    solution.
 - Day 03
   - The best software design is only as good as it fits real-world input.
 - Day 05
@@ -32,3 +33,6 @@ Each day's individual puzzle input needs to be placed as `ìnput.txt` file insid
 - Day 11
   - Think ahead, but focus on what _really_ needs to be done. For everything else,
     [YAGNI](https://en.wikipedia.org/wiki/YAGNI).
+- Day 12
+  - Sometimes, the most simple solution does the trick. Start simple and only go for what you
+    actually need.

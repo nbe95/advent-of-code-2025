@@ -50,6 +50,7 @@ disable = [
     "missing-module-docstring",
     "missing-class-docstring",
     "missing-function-docstring",
-    "unspecified-encoding"
+    "unspecified-encoding",
+    "invalid-name"
 ]
 ignore-paths = '.venv/'
