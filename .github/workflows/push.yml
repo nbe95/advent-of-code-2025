@@ -1,0 +1,36 @@
+
+name: Unit tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  unit_tests:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      checks: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pdm
+        uses: pdm-project/setup-pdm@v4
+
+      - name: Install dependencies
+        run: pdm install
+
+      - name: Run tests
+        run: pdm run pytest --junitxml=report.xml
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: ${{ !cancelled() }}       # run this step even if previous step failed
+        with:
+          name: pytest test results
+          path: report.xml
+          reporter: java-junit
